@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export function HomeScreen() {
 
@@ -10,14 +11,14 @@ export function HomeScreen() {
   //Assim que carregar a tela fazer isso
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerTitle: "Testing",
+      headerShown: false,
     }); 
   }, [] //Array de mucanças 
   );
 
   return (
-    <View>
+    <SafeAreaView>
       <Text className="text-blue-600">Página HomeScreen</Text>
-    </View>
+    </SafeAreaView>
   );
 };
